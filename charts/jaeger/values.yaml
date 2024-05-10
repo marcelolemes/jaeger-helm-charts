@@ -23,7 +23,7 @@ allInOne:
   enabled: false
   replicas: 1
   image:
-    registry: ""
+    registry: docker.binarios.intranet.bb.com.br
     repository: jaegertracing/all-in-one
     tag: ""
     digest: ""
@@ -224,7 +224,7 @@ kafka:
 schema:
   annotations: {}
   image:
-    registry: ""
+    registry: docker.binarios.intranet.bb.com.br
     repository: jaegertracing/jaeger-cassandra-schema
     tag: ""
     digest: ""
@@ -266,7 +266,7 @@ elasticsearch: {}
 # elasticsearch:
 #   fullnameOverride: "elasticsearch"
 #   image:
-#     registry: ""
+#     registry: docker.binarios.intranet.bb.com.br
 #     repository: docker.io/bitnami/elasticsearch
 #     tag: ""
 #   master:
@@ -283,13 +283,13 @@ elasticsearch: {}
 #   extraConfig:
 #     cluster.max_shards_per_node: 3000
 #   sysctlImage:
-#     registry: ""
+#     registry: docker.binarios.intranet.bb.com.br
 #     repository: docker.io/bitnami/os-shell
 #     tag: 12-debian-12-r18
 #   volumePermissions:
 #     enabled: true
 #     image:
-#       registry: ""
+#       registry: docker.binarios.intranet.bb.com.br
 #       repository: docker.io/bitnami/os-shell
 #       tag: 12-debian-12-r18
 #   data:
@@ -305,7 +305,7 @@ ingester:
   securityContext: {}
   annotations: {}
   image:
-    registry: ""
+    registry: docker.binarios.intranet.bb.com.br
     repository: jaegertracing/jaeger-ingester
     tag: ""
     digest: ""
@@ -365,10 +365,10 @@ ingester:
 agent:
   podSecurityContext: {}
   securityContext: {}
-  enabled: true
+  enabled: false
   annotations: {}
   image:
-    registry: ""
+    registry: docker.binarios.intranet.bb.com.br
     repository: jaegertracing/jaeger-agent
     tag: ""
     digest: ""
@@ -450,9 +450,9 @@ collector:
   enabled: true
   annotations: {}
   image:
-    registry: ""
+    registry: docker.binarios.intranet.bb.com.br
     repository: jaegertracing/jaeger-collector
-    tag: ""
+    tag: 1.56
     digest: ""
     pullPolicy: IfNotPresent
     pullSecrets: []
@@ -653,7 +653,7 @@ query:
   podSecurityContext: {}
   securityContext: {}
   agentSidecar:
-    enabled: true
+    enabled: false
   #    resources:
   #      limits:
   #        cpu: 500m
@@ -663,7 +663,7 @@ query:
   #        memory: 128Mi
   annotations: {}
   image:
-    registry: ""
+    registry: docker.binarios.intranet.bb.com.br
     repository: jaegertracing/jaeger-query
     tag: ""
     digest: ""
@@ -777,7 +777,7 @@ spark:
   enabled: false
   annotations: {}
   image:
-    registry: ""
+    registry: docker.binarios.intranet.bb.com.br
     repository: jaegertracing/spark-dependencies
     tag: latest
     digest: ""
@@ -822,7 +822,7 @@ esIndexCleaner:
     runAsUser: 1000
   annotations: {}
   image:
-    registry: ""
+    registry: docker.binarios.intranet.bb.com.br
     repository: jaegertracing/jaeger-es-index-cleaner
     tag: ""
     digest: ""
@@ -870,7 +870,7 @@ esRollover:
     runAsUser: 1000
   annotations: {}
   image:
-    registry: ""
+    registry: docker.binarios.intranet.bb.com.br
     repository: jaegertracing/jaeger-es-rollover
     tag: ""
     digest: ""
@@ -924,7 +924,7 @@ esLookback:
     runAsUser: 1000
   annotations: {}
   image:
-    registry: ""
+    registry: docker.binarios.intranet.bb.com.br
     repository: jaegertracing/jaeger-es-rollover
     tag: ""
     digest: ""
@@ -983,7 +983,7 @@ hotrod:
   #   - name: OTEL_EXPORTER_OTLP_ENDPOINT
   #     value: http://my-otel-collector.chart.local:4318
   image:
-    registry: ""
+    registry: docker.binarios.intranet.bb.com.br
     repository: jaegertracing/example-hotrod
     tag: ""
     digest: ""
